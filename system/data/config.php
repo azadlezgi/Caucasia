@@ -14,7 +14,7 @@ $config = array (
 
 'charset' => "utf-8",
 
-'home_url' => "http://caucasia.online/",
+'home_url' => "http://caucasia.loc/",
 
 'temp' => "Default",
 

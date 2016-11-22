@@ -2,11 +2,11 @@
 
 define ("DBHOST", "localhost"); 
 
-define ("DBNAME", "lezginet_sn");
+define ("DBNAME", "caucasia");
 
-define ("DBUSER", "lezginet_sn");
+define ("DBUSER", "root");
 
-define ("DBPASS", "0L6c2U0rX6w3L9j1");  
+define ("DBPASS", "");
 
 define ("PREFIX", "vii");
 

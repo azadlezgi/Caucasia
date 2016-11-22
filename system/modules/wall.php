@@ -834,19 +834,6 @@ if(!defined('MOZG'))
 						} else {
 
 							$wall->template('wall/record.tpl');
-
-
-			//Авторизован или нет
-			if($logged){
-				$tpl->set('[logged]', '');
-				$tpl->set('[/logged]', '');
-				$tpl->set_block("'\\[not-logged\\](.*?)\\[/not-logged\\]'si","");
-			} else {
-				$tpl->set('[not-logged]', '');
-				$tpl->set('[/not-logged]', '');
-				$tpl->set_block("'\\[logged\\](.*?)\\[/logged\\]'si","");
-			}
-
 							$wall->compile('wall');
 							$wall->select();
 						}

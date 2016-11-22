@@ -3,16 +3,16 @@
  <div class="wall_rec_autoresize">
  <div class="wallauthor fl_l" style="padding-left:0px"><a href="/u{user-id}" onClick="Page.Go(this.href); return false">{name}</a> <span class="color777">{type}</span></div>
  [logged]
- [owner]<div class="wall_delete" onMouseOver="myhtml.title('{rec-id}', 'Удалить запись', 'wall_del_')" onClick="wall.delet('{rec-id}'); return false" id="wall_del_{rec-id}"></div>[/owner]
+ [owner]<div class="wall_delete azad" onMouseOver="myhtml.title('{rec-id}', 'Удалить запись', 'wall_del_')" onClick="wall.delet('{rec-id}'); return false" id="wall_del_{rec-id}"></div>[/owner]
  <div class="wall_tell_all cursor_pointer" onMouseOver="myhtml.title('{rec-id}', 'Отправить в сообщество или другу', 'wall_tell_all_')" onClick="Repost.Box('{rec-id}'); return false "id="wall_tell_all_{rec-id}"></div>
  [owner-record]<div class="wall_tell cursor_pointer" onMouseOver="myhtml.title('{rec-id}', 'Рассказать друзьям', 'wall_tell_')" onClick="wall.tell('{rec-id}'); return false" id="wall_tell_{rec-id}" style="margin-top:2px;margin-left:4px"></div>
  <div class="wall_tell_ok no_display" id="wall_ok_tell_{rec-id}" style="margin-left:2px;margin-top:1px"></div>
- <div class="wall_delete" onMouseOver="myhtml.title('{rec-id}', 'Отметить как спам', 'wall_spam_')" onClick="Report.WallSend('wall', '{rec-id}'); return false"id="wall_spam_{rec-id}"></div>[/owner-record]
+ <div class="wall_delete zaza" onMouseOver="myhtml.title('{rec-id}', 'Отметить как спам', 'wall_spam_')" onClick="Report.WallSend('wall', '{rec-id}'); return false"id="wall_spam_{rec-id}"></div>[/owner-record]
  [/logged]
  <div class="wall_clear"></div>
  <div class="walltext">{text}</div>
  <div class="size10 infowalltext_f clear">
-  <div class="fl_l"><a href="/wall{author-id}_{rec-id}" onClick="Page.Go(this.href); return false" class="online">{date}</a> [privacy-comment][comments-link]<span id="fast_comm_link_{rec-id}" class="fast_comm_link">&nbsp;|&nbsp; <a href="/" id="fast_link_{rec-id}" onClick="wall.open_fast_form('{rec-id}'); wall.fast_open_textarea('{rec-id}'); return false">Комментировать</a></span>[/comments-link][/privacy-comment]</div>
+  <div class="fl_l"><a href="/wall{author-id}_{rec-id}" onClick="Page.Go(this.href); return false" rel="nofollow" class="online">{date}</a> [privacy-comment][comments-link]<span id="fast_comm_link_{rec-id}" class="fast_comm_link">[logged]&nbsp;|&nbsp; <a href="/" id="fast_link_{rec-id}" onClick="wall.open_fast_form('{rec-id}'); wall.fast_open_textarea('{rec-id}'); return false">Комментировать</a>[/logged]</span>[/comments-link][/privacy-comment]</div>
   <div class="public_likes_user_block no_display" id="public_likes_user_block{rec-id}" onMouseOver="groups.wall_like_users_five('{rec-id}')" onMouseOut="groups.wall_like_users_five_hide('{rec-id}')">
    <div onClick="wall.all_liked_users('{rec-id}', '', '{likes}')">Понравилось {likes-text}</div>
    <div class="public_wall_likes_hidden">
@@ -25,7 +25,7 @@
   </div>
   <input type="hidden" id="update_like{rec-id}" value="0" />
   <div class="fl_r public_wall_like cursor_pointer" [logged]onClick="{like-js-function}"[/logged] onMouseOver="groups.wall_like_users_five('{rec-id}', 'uPages')" onMouseOut="groups.wall_like_users_five_hide('{rec-id}')" id="wall_like_link{rec-id}">
-   <div class="fl_l" id="wall_like_active">Мне нравится</div>
+   <div class="fl_l" id="wall_like_active">[logged]Мне нравится[/logged][not-logged]Нравится[/not-logged]</div>
    <div class="public_wall_like_no {yes-like}" id="wall_active_ic{rec-id}"></div>
    <b id="wall_like_cnt{rec-id}" class="{yes-like-color}">{likes}</b>
   </div>
@@ -49,7 +49,7 @@
 <div class="wall_fast_ava"><a href="/u{user-id}" onClick="Page.Go(this.href); return false"><img src="{ava}" alt="" /></a></div>
 <div><a href="/u{user-id}" onClick="Page.Go(this.href); return false">{name}</a></div>
 <div class="wall_fast_comment_text">{text}</div>
-<div class="wall_fast_date">{date} [not-owner]&nbsp;-&nbsp; <a href="#" onClick="wall.Answer('{rec-id}', '{comm-id}', '{name}'); return false" id="answer_lnk">Ответить</a>[/not-owner][owner]<a href="/" class="size10 fl_r no_display" id="fast_del_{comm-id}" onClick="wall.fast_comm_del('{comm-id}'); return false">Удалить</a>[/owner]</div>
+<div class="wall_fast_date">{date} [logged][not-owner]&nbsp;-&nbsp; <a href="#" onClick="wall.Answer('{rec-id}', '{comm-id}', '{name}'); return false" id="answer_lnk">Ответить</a>[/not-owner][owner]<a href="/" class="size10 fl_r no_display" id="fast_del_{comm-id}" onClick="wall.fast_comm_del('{comm-id}'); return false">Удалить</a>[/owner][/logged]</div>
 <div class="clear"></div>
 </div>[/comment]
 [logged]
